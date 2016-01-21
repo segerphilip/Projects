@@ -15,3 +15,22 @@ let rec sumto (n) = if n = 0 then 0 else sumto(n - 1) + n
 let add (x,y) = x + y
 
 (* let first p = match p with (x,y) -> x  *) (* useful for type checking first component *)
+
+(* lists *)
+let l = [1;2;3]
+
+let lst = [1;2;3]
+
+(* 5::lst *) (* adds 5 to front *)
+
+let classify (lst) =
+  match lst with [] -> "empty"
+               | a::b -> "not empty"
+
+let rec length (lst) =
+  match lst with [] -> 0
+               | fst::rst -> length(rst) + 1
+
+let rec sum (lst) = 
+  match lst with [] -> 0
+               | fst::rst -> sum(rst) + fst
